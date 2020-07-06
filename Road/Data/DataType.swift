@@ -7,3 +7,13 @@
 //
 
 import RealmSwift
+
+class dataItem: Object {
+    @objc dynamic var itemTitle = ""
+    @objc dynamic var itemPhoto = ""
+    @objc dynamic var itemType = ""
+    @objc dynamic var itemCity = ""
+    @objc dynamic var itemLatitude = ""
+    @objc dynamic var itemLongitude = ""
+    @objc dynamic var itemDescription = ""
+}

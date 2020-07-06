@@ -7,8 +7,18 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
+    
+    @State var itemTitle = ""
+    @State var itemPhoto = ""
+    @State var itemType = ""
+    @State var itemCity = ""
+    @State var itemLatitude = ""
+    @State var itemLongitude = ""
+    @State var itemDescription = ""
+    
     var body: some View {
         ScrollView {
             VStack{
@@ -44,6 +54,50 @@ struct ContentView: View {
                                     
                 }
                 .padding()
+                VStack {
+                    TextField("Name", text: $itemType).textFieldStyle(RoundedBorderTextFieldStyle())
+                    TextField("Age", text: $itemTitle).textFieldStyle(RoundedBorderTextFieldStyle())
+                    Button(action: {
+                        let config = Realm.Configuration(schemaVersion : 1)
+                        do
+                        {
+                            let realm = try Realm(configuration: config)
+                            let result = realm.objects(dataItem.self)
+                            print(result)
+                            print(Realm.Configuration.defaultConfiguration)
+
+                        }
+                        catch{
+                            print(error.localizedDescription)
+                        }
+                        
+                    }) {
+                        Text("display")
+                    }
+                    
+                    Button(action: {
+                        let config = Realm.Configuration(schemaVersion : 1)
+                        do
+                        {
+                            let realm = try Realm(configuration: config)
+                            let newdata = dataItem()
+                            newdata.itemType = self.itemType
+                            newdata.itemTitle = self.itemTitle
+                            try realm.write({
+                                
+                                realm.add(newdata)
+                                print("success")
+                                
+                            })
+                        }
+                        catch{
+                            print(error.localizedDescription)
+                        }
+                        
+                    }) {
+                        Text(/*@START_MENU_TOKEN@*/"Save"/*@END_MENU_TOKEN@*/)
+                    }
+                }
             }
         }
         
