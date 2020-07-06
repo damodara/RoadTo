@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		6A340A172471612E00FA328E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A340A152471612E00FA328E /* LaunchScreen.storyboard */; };
 		6A340A222471612F00FA328E /* RoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A340A212471612F00FA328E /* RoadTests.swift */; };
 		6A340A2D2471612F00FA328E /* RoadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A340A2C2471612F00FA328E /* RoadUITests.swift */; };
+		6A6CCBA824B358B6001EB0F0 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6CCBA724B358B6001EB0F0 /* DataType.swift */; };
 		6AA369D624748F0B00742FE4 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA369D524748F0B00742FE4 /* CircleImage.swift */; };
 		6AA369D824748FF700742FE4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA369D724748FF700742FE4 /* MapView.swift */; };
 		9756EC88FC7D774C6C1A09B7 /* Pods_Road_RoadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89FCFA4C6575687472F5EC3 /* Pods_Road_RoadUITests.framework */; };
@@ -59,6 +60,7 @@
 		6A340A282471612F00FA328E /* RoadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A340A2C2471612F00FA328E /* RoadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadUITests.swift; sourceTree = "<group>"; };
 		6A340A2E2471612F00FA328E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A6CCBA724B358B6001EB0F0 /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 		6AA369D524748F0B00742FE4 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		6AA369D724748FF700742FE4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		6C4E4EF50EDB37BC61D83DCF /* Pods-Road-RoadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road-RoadUITests.debug.xcconfig"; path = "Target Support Files/Pods-Road-RoadUITests/Pods-Road-RoadUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,7 +109,6 @@
 				502B13B819A0E8B8F5427250 /* Pods-RoadTests.debug.xcconfig */,
 				7DDF21E41864C003D86EAC42 /* Pods-RoadTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -136,6 +137,7 @@
 		6A340A062471612C00FA328E /* Road */ = {
 			isa = PBXGroup;
 			children = (
+				6A6CCBA624B3589E001EB0F0 /* Data */,
 				6A340A072471612C00FA328E /* AppDelegate.swift */,
 				6A340A092471612C00FA328E /* SceneDelegate.swift */,
 				6A340A0E2471612C00FA328E /* ContentView.swift */,
@@ -174,6 +176,14 @@
 				6A340A2E2471612F00FA328E /* Info.plist */,
 			);
 			path = RoadUITests;
+			sourceTree = "<group>";
+		};
+		6A6CCBA624B3589E001EB0F0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6A6CCBA724B358B6001EB0F0 /* DataType.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		9E070C3F8514C630E9328A9B /* Frameworks */ = {
@@ -431,6 +441,7 @@
 				6A340A0F2471612C00FA328E /* ContentView.swift in Sources */,
 				6A340A0A2471612C00FA328E /* SceneDelegate.swift in Sources */,
 				6AA369D624748F0B00742FE4 /* CircleImage.swift in Sources */,
+				6A6CCBA824B358B6001EB0F0 /* DataType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
